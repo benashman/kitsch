@@ -12,6 +12,7 @@
 		CAE362B61C4F2D4C00272DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B41C4F2D4C00272DD5 /* Main.storyboard */; };
 		CAE362B81C4F2D4C00272DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */; };
 		CAE362BB1C4F2D4C00272DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */; };
+		CAE362C31C4F2F0E00272DD5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE362C21C4F2F0E00272DD5 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAE362BA1C4F2D4C00272DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAE362BC1C4F2D4C00272DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE362C21C4F2F0E00272DD5 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */,
 				CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */,
 				CAE362BC1C4F2D4C00272DD5 /* Info.plist */,
+				CAE362C21C4F2F0E00272DD5 /* Keys.plist */,
 			);
 			path = Kitsch;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE362C31C4F2F0E00272DD5 /* Keys.plist in Resources */,
 				CAE362BB1C4F2D4C00272DD5 /* LaunchScreen.storyboard in Resources */,
 				CAE362B81C4F2D4C00272DD5 /* Assets.xcassets in Resources */,
 				CAE362B61C4F2D4C00272DD5 /* Main.storyboard in Resources */,
