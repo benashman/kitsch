@@ -1,0 +1,6 @@
+framework module Pods_Kitsch {
+  umbrella header "Pods-Kitsch-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,10 @@
+PODS:
+  - ForecastIO (1.5.0)
+
+DEPENDENCIES:
+  - ForecastIO
+
+SPEC CHECKSUMS:
+  ForecastIO: b6b3e26e7134acf8a05388cc513a9e7eb18846b7
+
+COCOAPODS: 0.39.0
