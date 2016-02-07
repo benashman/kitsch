@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import CoreLocation
 import MapKit
 import ForecastIO
@@ -28,8 +29,17 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-            locationManager.startUpdatingLocation()
+            
+            getCurrentLocation()
+            
+            // Fetch location at regular intervals
+            let interval = 60.0 * 10
+            let locationTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: Selector("getCurrentLocation"), userInfo: nil, repeats: true)
         }
+    }
+    
+    func getCurrentLocation() {
+        locationManager.startUpdatingLocation()
     }
     
     func getForecastForLocation(lat: Double, lng: Double) {
@@ -66,10 +76,10 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
+        
         let coordinates = manager.location!.coordinate
         self.getForecastForLocation(coordinates.latitude, lng: coordinates.longitude)
-        
-        locationManager.stopUpdatingLocation()
     }
 }
 
