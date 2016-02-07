@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 import ForecastIO
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var weatherTempLabel: UILabel!
     @IBOutlet weak var weatherSummaryLabel: UILabel!
+    
+    let locationManager = CLLocationManager()
+    let geocoder = CLGeocoder()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set up Forecast client
+        // Request location
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func getForecastForLocation(lat: Double, lng: Double) {
         let keyPath = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist")!
         let keyDictionary = NSDictionary(contentsOfFile: keyPath)!
         let forecastAPIKey = keyDictionary.objectForKey("ForecastIOAPIKey") as! String
@@ -25,29 +40,36 @@ class DashboardViewController: UIViewController {
         let forecastClient = APIClient(apiKey: forecastAPIKey)
         forecastClient.units = .UK
         
-        let lat = 37.7756899
-        let lng = -122.4189387
+        let location = CLLocation(latitude: lat, longitude: lng)
         
-        forecastClient.getForecast(latitude: lat, longitude: lng, completion: { (forecast, error) -> Void in
-            if let forecast = forecast {
-                let currentWeather = forecast.currently!
-                let temperature = Int(currentWeather.temperature!)
-                let summary = currentWeather.summary!
+        geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+            let placemark = placemarks![0]
+            let cityName = placemark.addressDictionary!["City"] as! String
             
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.weatherTempLabel.text = "\(temperature)° in San Francisco"
-                    self.weatherSummaryLabel.text = summary
+            forecastClient.getForecast(latitude: lat, longitude: lng, completion: { (forecast, error) -> Void in
+                if let forecast = forecast {
+                    let currentWeather = forecast.currently!
+                    let temperature = Int(currentWeather.temperature!)
+                    let summary = currentWeather.summary!
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.weatherTempLabel.text = "\(temperature)° in \(cityName)"
+                        self.weatherSummaryLabel.text = summary
+                    }
+                } else if let error = error {
+                    print(error)
                 }
-            } else if let error = error {
-                print(error)
-            }
+            })
         })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    // MARK: CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let coordinates = manager.location!.coordinate
+        self.getForecastForLocation(coordinates.latitude, lng: coordinates.longitude)
+        
+        locationManager.stopUpdatingLocation()
     }
-
-
 }
 

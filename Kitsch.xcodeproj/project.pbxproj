@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAE30C531C67E16500D011EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE30C521C67E16500D011EB /* CoreLocation.framework */; };
 		CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */; };
 		CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */; };
 		CAE362B61C4F2D4C00272DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B41C4F2D4C00272DD5 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		3156D347DDB7FA5298D3BEF7 /* Pods_Kitsch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitsch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B956278762D268E3F51F4B /* Pods-Kitsch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kitsch/Pods-Kitsch.release.xcconfig"; sourceTree = "<group>"; };
 		A4C75783FC824FDE8824DECC /* Pods-Kitsch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kitsch/Pods-Kitsch.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE30C521C67E16500D011EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CAE362AD1C4F2D4C00272DD5 /* Kitsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kitsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE30C531C67E16500D011EB /* CoreLocation.framework in Frameworks */,
 				F147274A4DB190275CF82164 /* Pods_Kitsch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		C63CE28EA3B1BB64A43F78C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAE30C521C67E16500D011EB /* CoreLocation.framework */,
 				3156D347DDB7FA5298D3BEF7 /* Pods_Kitsch.framework */,
 			);
 			name = Frameworks;
