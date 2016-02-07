@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */; };
-		CAE362B31C4F2D4C00272DD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B21C4F2D4C00272DD5 /* ViewController.swift */; };
+		CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */; };
 		CAE362B61C4F2D4C00272DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B41C4F2D4C00272DD5 /* Main.storyboard */; };
 		CAE362B81C4F2D4C00272DD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */; };
 		CAE362BB1C4F2D4C00272DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		A4C75783FC824FDE8824DECC /* Pods-Kitsch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kitsch/Pods-Kitsch.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE362AD1C4F2D4C00272DD5 /* Kitsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kitsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAE362B21C4F2D4C00272DD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		CAE362B51C4F2D4C00272DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAE362BA1C4F2D4C00272DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */,
-				CAE362B21C4F2D4C00272DD5 /* ViewController.swift */,
+				CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */,
 				CAE362B41C4F2D4C00272DD5 /* Main.storyboard */,
 				CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */,
 				CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAE362B31C4F2D4C00272DD5 /* ViewController.swift in Sources */,
+				CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */,
 				CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
