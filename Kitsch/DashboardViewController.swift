@@ -76,10 +76,11 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     // MARK: CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        locationManager.stopUpdatingLocation()
-        
-        let coordinates = manager.location!.coordinate
-        self.getForecastForLocation(coordinates.latitude, lng: coordinates.longitude)
+        if let coordinates = manager.location?.coordinate {
+            self.getForecastForLocation(coordinates.latitude, lng: coordinates.longitude)
+            
+            locationManager.stopUpdatingLocation()
+        }
     }
 }
 
