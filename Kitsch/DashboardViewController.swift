@@ -32,13 +32,14 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
             
             getCurrentLocation()
             
-            // Fetch location at regular intervals
+            // Fetch location every 10 mins
             let interval = 60.0 * 10
             let locationTimer = NSTimer.scheduledTimerWithTimeInterval(interval, target: self, selector: Selector("getCurrentLocation"), userInfo: nil, repeats: true)
         }
     }
     
     func getCurrentLocation() {
+        showNetworkActivityIndicator()
         locationManager.startUpdatingLocation()
     }
     
@@ -80,6 +81,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
             self.getForecastForLocation(coordinates.latitude, lng: coordinates.longitude)
             
             locationManager.stopUpdatingLocation()
+            hideNetworkActivityIndicator()
         }
     }
 }

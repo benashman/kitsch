@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAA6AA311C704970004F05B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6AA301C704970004F05B0 /* Helper.swift */; };
 		CAE30C531C67E16500D011EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE30C521C67E16500D011EB /* CoreLocation.framework */; };
 		CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */; };
 		CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */; };
@@ -21,6 +22,7 @@
 		3156D347DDB7FA5298D3BEF7 /* Pods_Kitsch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitsch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B956278762D268E3F51F4B /* Pods-Kitsch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kitsch/Pods-Kitsch.release.xcconfig"; sourceTree = "<group>"; };
 		A4C75783FC824FDE8824DECC /* Pods-Kitsch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitsch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kitsch/Pods-Kitsch.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA6AA301C704970004F05B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		CAE30C521C67E16500D011EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CAE362AD1C4F2D4C00272DD5 /* Kitsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kitsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */,
 				CAE362BC1C4F2D4C00272DD5 /* Info.plist */,
 				CAE362C21C4F2F0E00272DD5 /* Keys.plist */,
+				CAA6AA301C704970004F05B0 /* Helper.swift */,
 			);
 			path = Kitsch;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			files = (
 				CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */,
 				CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */,
+				CAA6AA311C704970004F05B0 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
