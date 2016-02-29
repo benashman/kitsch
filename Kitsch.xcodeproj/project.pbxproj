@@ -10,6 +10,7 @@
 		CA295C681C83C5F3009C3F43 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA295C671C83C5F3009C3F43 /* HomeKit.framework */; };
 		CA295C6B1C83C803009C3F43 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA295C6A1C83C803009C3F43 /* SettingsViewController.swift */; };
 		CA295C6D1C83C9F7009C3F43 /* ShowHomesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA295C6C1C83C9F7009C3F43 /* ShowHomesViewController.swift */; };
+		CA295C6F1C83D155009C3F43 /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA295C6E1C83D155009C3F43 /* AddHomeViewController.swift */; };
 		CAA6AA311C704970004F05B0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6AA301C704970004F05B0 /* Helper.swift */; };
 		CAE30C531C67E16500D011EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE30C521C67E16500D011EB /* CoreLocation.framework */; };
 		CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE362B01C4F2D4C00272DD5 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		CA295C691C83C5F3009C3F43 /* Kitsch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Kitsch.entitlements; sourceTree = "<group>"; };
 		CA295C6A1C83C803009C3F43 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CA295C6C1C83C9F7009C3F43 /* ShowHomesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowHomesViewController.swift; sourceTree = "<group>"; };
+		CA295C6E1C83D155009C3F43 /* AddHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
 		CAA6AA301C704970004F05B0 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		CAE30C521C67E16500D011EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CAE362AD1C4F2D4C00272DD5 /* Kitsch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kitsch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				CA295C6A1C83C803009C3F43 /* SettingsViewController.swift */,
 				CAE362B21C4F2D4C00272DD5 /* DashboardViewController.swift */,
 				CAE362B41C4F2D4C00272DD5 /* Main.storyboard */,
+				CA295C6E1C83D155009C3F43 /* AddHomeViewController.swift */,
 				CA295C6C1C83C9F7009C3F43 /* ShowHomesViewController.swift */,
 				CAE362B71C4F2D4C00272DD5 /* Assets.xcassets */,
 				CAE362B91C4F2D4C00272DD5 /* LaunchScreen.storyboard */,
@@ -242,6 +245,7 @@
 				CAE362B31C4F2D4C00272DD5 /* DashboardViewController.swift in Sources */,
 				CAE362B11C4F2D4C00272DD5 /* AppDelegate.swift in Sources */,
 				CA295C6D1C83C9F7009C3F43 /* ShowHomesViewController.swift in Sources */,
+				CA295C6F1C83D155009C3F43 /* AddHomeViewController.swift in Sources */,
 				CAA6AA311C704970004F05B0 /* Helper.swift in Sources */,
 				CA295C6B1C83C803009C3F43 /* SettingsViewController.swift in Sources */,
 			);

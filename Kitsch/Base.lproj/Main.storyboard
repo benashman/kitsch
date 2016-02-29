@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HK-Ec-3lg">
-                                <rect key="frame" x="163" y="87" width="49" height="30"/>
+                                <rect key="frame" x="163" y="319" width="49" height="30"/>
                                 <state key="normal" title="Homes"/>
                                 <connections>
                                     <segue destination="qLM-nB-Mms" kind="show" id="ckJ-ML-vFq"/>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1272.5" y="335.5"/>
         </scene>
-        <!--Show Homes View Controller-->
+        <!--Homes-->
         <scene sceneID="foX-yJ-82a">
             <objects>
-                <viewController id="qLM-nB-Mms" customClass="ShowHomesViewController" customModule="Kitsch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Homes" id="qLM-nB-Mms" customClass="ShowHomesViewController" customModule="Kitsch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lUi-Xx-q8g"/>
                         <viewControllerLayoutGuide type="bottom" id="MSE-6s-Ahq"/>
@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BSI-4f-mwy">
-                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="65L-1c-3Lo">
@@ -104,9 +104,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgm-uj-DIs">
+                                <rect key="frame" x="325" y="28" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="229-vd-atJ" kind="show" identifier="addHomeSegue" id="C8o-Bq-p2P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="MnO-63-aKp"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="homesTableView" destination="BSI-4f-mwy" id="iB9-dj-MIp"/>
@@ -114,7 +126,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWE-g7-iP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759.5" y="335.5"/>
+            <point key="canvasLocation" x="1759.5" y="326.5"/>
+        </scene>
+        <!--Add Home View Controller-->
+        <scene sceneID="1vE-ac-buY">
+            <objects>
+                <viewController id="229-vd-atJ" customClass="AddHomeViewController" customModule="Kitsch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cEc-TL-ePz"/>
+                        <viewControllerLayoutGuide type="bottom" id="mjr-Gk-kyP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qzD-vf-3Ep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter home name…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-kL-TVi">
+                                <rect key="frame" x="20" y="104" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAk-aF-nPT">
+                                <rect key="frame" x="170" y="162" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="addHome:" destination="229-vd-atJ" eventType="touchUpInside" id="dnJ-V7-EtF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="homeNameTextField" destination="r4F-kL-TVi" id="E9A-FB-M82"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7d-Ga-VlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2204.5" y="326.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rCw-z1-w9h">

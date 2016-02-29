@@ -13,17 +13,20 @@ class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var homesTableView: UITableView!
     
-    lazy var homeManager: HMHomeManager = {
-        let manager = HMHomeManager()
-        manager.delegate = self
-        return manager
-    }()
+    var homeManager: HMHomeManager = HMHomeManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        homeManager.delegate = self
+        
         homesTableView.delegate = self
         homesTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        homesTableView.reloadData()
     }
     
     // MARK: UITableViewDataSource
@@ -39,9 +42,26 @@ class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableVie
 
         let home = homeManager.homes[indexPath.row] as HMHome
         
+        cell.textLabel!.text = home.name
+        
         return cell
     }
+    
+    // MARK: HomeManagerDelegate
+    
+    func homeManagerDidUpdateHomes(manager: HMHomeManager) {
+        homesTableView.reloadData()
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addHomeSegue" {
+            let controller = segue.destinationViewController as! AddHomeViewController
+            controller.homeManager = homeManager
+        }
+        
+        super.prepareForSegue(segue, sender: sender)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
