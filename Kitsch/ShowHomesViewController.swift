@@ -38,7 +38,10 @@ class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeManager.homes.count
+        let numberOfRows = homeManager.homes.count
+        editHomesButton.enabled = numberOfRows > 0
+        
+        return numberOfRows
     }
     
 
