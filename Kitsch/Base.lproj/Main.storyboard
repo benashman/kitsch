@@ -90,6 +90,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgm-uj-DIs">
+                                <rect key="frame" x="325" y="28" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <segue destination="229-vd-atJ" kind="show" identifier="addHomeSegue" id="C8o-Bq-p2P"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BSI-4f-mwy">
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,11 +111,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgm-uj-DIs">
-                                <rect key="frame" x="325" y="28" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZN-Cc-fjk">
+                                <rect key="frame" x="20" y="28" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="229-vd-atJ" kind="show" identifier="addHomeSegue" id="C8o-Bq-p2P"/>
+                                    <action selector="editHomes:" destination="qLM-nB-Mms" eventType="touchUpInside" id="xzn-mq-82G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +128,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="addHomeButton" destination="Lgm-uj-DIs" id="i8D-ZK-iaq"/>
+                        <outlet property="editHomesButton" destination="RZN-Cc-fjk" id="5tr-V7-8pg"/>
                         <outlet property="homesTableView" destination="BSI-4f-mwy" id="iB9-dj-MIp"/>
                     </connections>
                 </viewController>

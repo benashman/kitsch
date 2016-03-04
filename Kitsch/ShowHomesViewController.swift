@@ -11,6 +11,8 @@ import HomeKit
 
 class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, HMHomeManagerDelegate {
     
+    @IBOutlet weak var addHomeButton: UIButton!
+    @IBOutlet weak var editHomesButton: UIButton!
     @IBOutlet weak var homesTableView: UITableView!
     
     var homeManager: HMHomeManager = HMHomeManager()
@@ -29,12 +31,17 @@ class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableVie
         homesTableView.reloadData()
     }
     
+    @IBAction func editHomes(sender: AnyObject) {
+        homesTableView.setEditing(true, animated: true)
+    }
+    
     // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeManager.homes.count
     }
     
+
     // MARK: UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -45,6 +52,22 @@ class ShowHomesViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.textLabel!.text = home.name
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Handle home deletion
+        if editingStyle == .Delete {
+            let home = homeManager.homes[indexPath.row] as HMHome
+            
+            homeManager.removeHome(home, completionHandler: { (error) in
+                if error != nil {
+                    print("Error: \(error)")
+                } else {
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+                }
+            })
+        }
     }
     
     // MARK: HomeManagerDelegate
